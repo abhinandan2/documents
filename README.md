@@ -119,9 +119,52 @@ The whole sturcture is as follows:
   }
 ```
 
+## Components List
+All possible Components for Quickreply, Message and Modal.
+
+### Quickreply Components
+
+     1. Buttons
+       - Text
+       - URL redirector
+       - Send Location
+       - Multi Select
+       - Radio
+       - Share Button
+     2. Card
+     3. Carousal
+     4. List Picker
+     5. Calendar
+     6. Audio Recorder
+     7. Barcode Scanner
+     8. Custom Input
+     9. Wizard
+     10. File Picker
+     
+### Message Components
+     1. Card
+     2. Carousal
+     3. Flight Info
+     4. List Card
+     5. Image Card
+     6. Video Card
+     7. Audio Card
+
+### Modal Components
+Components that opens in a modal:
+
+     1. Image Capture
+     2. Video Capture
+     3. Seat Booking
+
+
 ### To Do:
-1. List components.
+1. ~List components.~
 2. Structure the JSON for each component.
 3. Paged documentation for each.
+
+
+
+
 
 ***~*** ***Abhinandan Shah*** ***~***
