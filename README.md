@@ -85,28 +85,77 @@ Properties to the message.
 
 The whole sturcture is as follows:
 ```
-  {
+{
     messages: [
       {
-      <!-- The type of message to be sent -->
+      // <!-- The type of message to be sent -->
         type: "text / html / quickreply / component",
-        <!-- Unique Message ID associated with the entire message. -->
+        // <!-- Unique Message ID associated with the entire message. -->
         message_id: "alpha numeric string",
         
         payload: {
-          <!-- To send a text message. Can be paired with quick_replies -->
+          // <!-- To send a text message. Can be paired with quick_replies -->
           text: "This is a simple text",
-          <!-- To send a styled message. Can be paired with quick_replies -->
+          // <!-- To send a styled message. Can be paired with quick_replies -->
           html: "<h2>This is html</h2>",
           quick_replies: [{
-            id: "unique button id",
-            ref: "ref to send back. Could be anything.",
-            content_type: "text / url / location",
-            style: "primary / secondary",
-            title: "(opt) Text to show.",
+            id: "",
+            ref: "QRTX_29A1",
+            content_type: "text",
+            style: "primary",
+            title: "Hello this is a text button!",
             icon: "(opt) Icon url to show on the right. 24px x 24px",
-            url: "(opt) Url to redirect to."
-          }]
+          },{
+          	// URL
+          	id: "",
+          	ref: "QRUL_29A2",
+          	content_type: "url",
+          	style: "primary",
+          	title: "This will open a url in new tab!",
+          	icon: "open.jpg",
+          	url: "phonon.in/?utm_campaign=PHON"          	
+          },{
+          	// Multi
+          	id: "",
+          	ref: "QRML_29A1",
+          	content_type: "multi",
+          	style: "primary",
+          	title: "Multi Option 1",
+          	icon: "prefix.jpg",
+          	is_selected: "true"
+          },{
+          	// Radio
+          	id: "",
+          	ref: "QRRD_29A1",
+          	content_type: "radio",
+          	style: "primary",
+          	title: "Radio Option 1",
+          	icon: "radio.jpg",
+          	is_selected: "true"
+          },{
+          	// Share
+          	id: "",
+          	ref: "QRSH_29A1",
+          	content_type: "share",
+          	style: "secondary",
+          	title: "Share now!",
+          	options: {
+          		title: "This is the Title!",
+          		description: "This is the description of the share!",
+          		url: "URL to put if any.",
+          		show_facebook: "true",
+          		show_twitter: "(opt)false",
+          		show_email: "true",
+          	}
+          },{
+          	id: "",
+          	ref: "QRLC_29A1",
+          	content_type: "location",
+          	style: "primary",
+          	title: "Click to share your location.",
+          	icon: "location.jpg",
+          }
+          ]
         },
         properties: {
           tag: "",
@@ -117,6 +166,7 @@ The whole sturcture is as follows:
       }
     ]
   }
+
 ```
 
 ## Components List
