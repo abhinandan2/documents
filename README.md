@@ -207,11 +207,234 @@ Components that opens in a modal:
      2. Video Capture
      3. Seat Booking
 
+# Final JSON Doc
+
+```
+
+function abhinandan() {
+	let The_Epic_Json_be =   {
+    messages: [
+      {
+      // <!-- The type of message to be sent -->
+        type: "text / html / quickreply / component",
+        // <!-- Unique Message ID associated with the entire message. -->
+        message_id: "alpha numeric string",
+        payload: {
+          // <!-- To send a text message. Can be paired with quick_replies -->
+          text: "This is a simple text",
+          // <!-- To send a styled message. Can be paired with quick_replies -->
+          html: "<h2>This is html</h2>",
+          quick_replies: {
+            id: "QR_ID",
+            ref: "",
+            elements: {
+              buttons: [{
+                id: "BTN_ID",
+                ref: "QRTX_29A1",
+                content_type: "text",
+                style: "primary",
+                title: "Hello this is a text button!",
+                icon: "(opt) Icon url to show on the right. 24px x 24px",
+              },{
+              	// URL
+              	id: "",
+              	ref: "QRUL_29A2",
+              	content_type: "url",
+              	style: "primary",
+              	title: "This will open a url in new tab!",
+              	icon: "open.jpg",
+              	url: "phonon.in/?utm_campaign=PHON"          	
+              },{
+              	// Multi
+              	id: "",
+              	ref: "QRML_29A1",
+              	content_type: "multi",
+              	style: "primary",
+              	title: "Multi Option 1",
+              	icon: "prefix.jpg",
+              	is_selected: "true"
+              },{
+              	// Radio
+              	id: "",
+              	ref: "QRRD_29A1",
+              	content_type: "radio",
+              	style: "primary",
+              	title: "Radio Option 1",
+              	icon: "radio.jpg",
+              	is_selected: "true"
+              },{
+              	// Share
+              	id: "",
+              	ref: "QRSH_29A1",
+              	content_type: "share",
+              	style: "secondary",
+              	title: "Share now!",
+              	options: {
+              		title: "This is the Title!",
+              		description: "This is the description of the share!",
+              		url: "URL to put if any.",
+              		show_facebook: "true",
+              		show_twitter: "(opt)false",
+              		show_email: "true",
+              	}
+              },{
+                // Location
+              	id: "",
+              	ref: "QRLC_29A1",
+              	content_type: "location",
+              	style: "primary",
+              	title: "Click to share your location.",
+              	icon: "location.jpg",
+              }],
+            },
+        },
+        properties: {
+          tag: "",
+          disabled: "True / False / Hidden",
+          ip_placeholder: "String to show in placeholder",
+          timestamp: 150000,
+          // For QR Multi only
+          qr_mul_max: "Max selectables",
+          qr_mul_min: "Minimum selectables",
+          // 
+        }
+      }
+    ]
+  }
+
+
+
+function quickreply_component() {
+	let The_Epic_Json_be =   {
+    messages: [
+      {
+      // <!-- Quickreply Component. -->
+        type: "quickreply",
+        message_id: "alpha numeric string",
+        
+        payload: {
+          // <!-- To send a text message. Can be paired with quick_replies -->
+          text: "This is a QR component called card.",
+          quick_replies: {
+            id: "",
+            ref: "QRCD_29A0",
+            content_type: "generic_card",
+            elements: {
+              title: "This is the title of card",
+              subtitle: "This is the title of card",
+              image_url: "BluesExplosion.jpg",
+              buttons: [{
+                id: "BTN001",
+                ref: "JNSWD",
+                title: "Jain Sandwhich",
+                style: "primary",
+                icon: "",
+              }]
+            }
+          },
+        }
+        properties: {
+          tag: "",
+          disabled: "True / False / Hidden",
+          ip_placeholder: "String to show in placeholder",
+          timestamp: 150000,
+        }
+      },
+      {
+        type: "quickreply",
+        message_id: "alpha numeric string",
+        
+        payload: {
+          // Calendar
+          text: "Calendar.",
+          quick_replies: {
+            id: "",
+            ref: "QRCD_29A0",
+            content_type: "calendar",
+            elements: {}
+          },
+        }
+        properties: {
+          tag: "",
+          disabled: "True / False / Hidden",
+          ip_placeholder: "String to show in placeholder",
+          timestamp: 150000,
+        },
+      }
+    ]
+  }
+}
+
+function component() {
+  let The_Epic_Json_be = {
+    messages = [
+    {
+      type: "component",
+      message_id: "MID",
+
+      payload: { 
+        id: "",
+        ref: "",
+        content_type: "seat_booking",
+        elements: {
+          map: [
+            'fff_fff',
+            'fff_fff',
+            'ebe_eee',
+            'ee___ee',
+            'Bee_eee',
+            'Bee_eee',
+            'Bee_eee',
+            'eee_eee',
+            'eee_eeB',
+            'eee_Bee',
+            'eee_eeB',
+            'eee_eee',
+            'eee_eee',
+            'eee_eee',
+            'eee_eee',
+            'eee_eee',
+            'eee_eee',
+            ],
+            seats: {
+              f:  {
+                    price   : 300,
+                    classes : 'first-class', //your custom CSS class
+                    category: 'First Class'
+                  },
+              e:  {
+                    price   : 200,
+                    classes : 'economy-class', //your custom CSS class
+                    category: 'Economy Class'
+                  }
+            },
+            columns: ['A', 'B', 'C', ' ', 'D', 'E', 'F'],
+            legend : [
+              [ 'f', 'available',   'First Class (300 Rs)' ],
+              [ 'e', 'available',   'Economy Class (200 Rs)'],
+              [ 'f', 'unavailable', 'Already Booked']
+            ],
+            maxseats: 3,
+        }
+      },
+      properties: {
+        tag: "",
+        disabled: "True / False / Hidden",
+        ip_placeholder: "String to show in placeholder",          
+      }
+    }]
+  }
+}
+
+```
+
+
 
 ### To Do:
 1. ~List components.~
-2. Structure the JSON for each component.
-3. Paged documentation for each.
+2. ~General Structure the JSON for component.~
+3. Each Component JSON.
+4. Paged documentation for each.
 
 
 
